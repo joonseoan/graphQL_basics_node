@@ -1,3 +1,7 @@
+// ************************************************
+//              Custom Data
+// ************************************************
+
 import { GraphQLServer } from 'graphql-yoga';
 
 const typeDefs = `

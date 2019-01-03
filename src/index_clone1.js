@@ -1,3 +1,7 @@
+// *************************************************************
+//              Custom Type
+// *************************************************************
+
 import { GraphQLServer } from 'graphql-yoga';
 
 // Custom Type (not Scalar TYPE)
@@ -106,12 +110,16 @@ query {
 */
 
 // type definition { Schema } : It is a graphQL Schema.
-// Like Mongoose, the graphQL docs must have Schema.
+// Like Mongoose, the graphQL documents must have Schema.
 
-// !: no null return
+// -----------------------------------------------------------------------------
+// !: no null return (not nullable)
 // Scalar types inside of graphql -  String, Boolean, Int, Float, ID, 
-// ID must be upper letters.
-// Additionally, object and array.
+// Additionally, object and array. We are dealing with them later on.
+// ************ ID must be upper letters.
+// -----------------------------------------------------------------------------
+
+// 2)
 // Remind: gpa does not have ! mark because some people does not have gpa.
 // const typeDefs = `
 //     type Query {
@@ -144,6 +152,7 @@ query {
 //     }
 // }
 
+// 1)
 // const typeDefs = `
 //     type Query {
 //         id: ID!

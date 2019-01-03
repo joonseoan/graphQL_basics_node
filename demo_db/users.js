@@ -13,8 +13,8 @@
 const users = [{
     id: '1',
     name: 'An',
-    // generated error because it exploited User type in the array!!!!
-    // ; type Query { users: [User!]! }
+    // generated error because it exploited 'User' type in the array!!!!
+    // type Query { users: [User!]! }
     // email: 'an@example.com',
     email: 'an@example.com',
     age: 27

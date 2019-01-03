@@ -1,12 +1,12 @@
-import { GraphQLServer } from 'graphql-yoga';
 
-/* **********************************************************
+/************************************************************
     The way of sending data from clients to the servers
 *************************************************************/ 
 
+import { GraphQLServer } from 'graphql-yoga';
 
-// greeting return is not required.
-// greeting(name: String): String!
+// 'greeting' arguments are not required. 
+//      greeting(name: String, position: String): String!
 const typeDefs = `
     type Query {
         add(number1: Float!, number2: Float!): Float!
@@ -28,11 +28,11 @@ const typeDefs = `
         body: String!
         published: Boolean!
     }
-`
+`;
 
 // Parmeters for the client schema
 // 1) prarent : relational database, the parent data: Users(paent) and Post(Child)
-// 2) args: contains all of the operation arguments supplied
+// 2) args: contains all of the operation 'arguments' supplied
 // 3) ctx : contextual data 
 // 4) info : information sent along to the server.
 
@@ -41,7 +41,7 @@ const resolvers = {
     Query: {
       add(parent, args) {
 
-        return args.number1 + args.number2
+          return args.number1 + args.number2
 
       },
       greeting(parent, args, ctx, ) {
@@ -91,7 +91,6 @@ query {
 }
 
 */
-
 
 const server = new GraphQLServer({
     typeDefs,

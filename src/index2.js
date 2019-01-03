@@ -1,9 +1,5 @@
 import { GraphQLServer } from 'graphql-yoga';
 
-/* **********************************************************
-    The way of sending data from clients to the servers
-*************************************************************/ 
-
 const typeDefs = `
     type Query {
         add(number1: Float!, number2: Float!): Float!
